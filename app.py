@@ -57,6 +57,8 @@ def welcome():
 
 @app.route("/api/v1.0/precipitation")
 
+# note: .\ is the first line of query that signifies the query should contine on the next line
+
 def precipitation():
    prev_year = dt.date(2017, 8, 23) - dt.timedelta(days=365)
    precipitation = session.query(Measurement.date, Measurement.prcp).\
